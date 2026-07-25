@@ -73,15 +73,17 @@ def earnings(_m=None) -> str:
      "US": ("short-horizon value reversion (≤3M)", "+1.72%/3M (≈+6.9%/yr)", "t 2.32 ✅ (fades by 6M)"),
      "KR": ("long/short cheap∩hi-ROE vs expensive∩lo-ROE", "+4.83%/6M (≈+9.9%/yr) — STRONGEST", "t 4.17 · DSR 0.99 ✅"),
      "EU": ("12M momentum (bull)", "IR 1.39 (bull regime)", "DSR 0.985 ✅ · value underpowered"),
-     "JP": ("(none validated)", "no edge survives multiple-testing", "underpowered 🔴"),
-     "CN": ("(pending)", "10y collection in progress", "insufficient 🔴"),
+     "JP": ("no robust factor", "technical: real null (no DSR survivor); value underpowered", "needs EDINET key 🔴"),
+     "CN": ("value tested & fails", "cheap−rich ≈ 0% (t 0.04) over 109 formations — powered null", "value edge absent ✅ tested"),
     }
     for mk, (s, e, sig) in rows.items():
         L.append(f"| {NAMES[mk]} | {s} | {e} | {sig} |")
     L += ["", "**Read:** earnings are the backtested long−short (or quintile) spread, gross of "
-          "costs and borrow. Annualised figures are indicative, not compounded guarantees. Only "
-          "IN/US/KR are powered+complete; EU momentum is robust but its value is underpowered; "
-          "JP/CN cannot be concluded yet.", "", "> " + KB["sizing_discipline"]]
+          "costs and borrow. Annualised figures are indicative, not compounded guarantees. IN/US/KR "
+          "are powered+complete (tradeable edges); EU momentum is robust (value underpowered); "
+          "**China is powered and value FAILS** (a real null — no value edge); **Japan** has no "
+          "technical factor that survives multiple-testing and its value stays underpowered until an "
+          "EDINET key enables deep history. Nulls are real verdicts, not gaps.", "", "> " + KB["sizing_discipline"]]
     return "\n".join(L)
 
 

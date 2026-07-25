@@ -22,15 +22,17 @@ backtests / the data — never invented.**
 | **Korea** | mean-reversion | **full long/short** | cheap∩hi-ROE − expensive∩lo-ROE | **+4.83%/6M** (≈+9.9%/yr) — strongest | t **4.17** · DSR 0.99 ✅ |
 | **US** | mixed/light | long-tilt | short-horizon cheap-vs-market | **+1.72%/3M** (≈+6.9%/yr) | t 2.32 ✅ (fades by 6M) |
 | **Europe** | momentum (bull) | directional | 12-month momentum | IR 1.39 (bull) | DSR 0.985 ✅ · value underpowered |
-| **Japan** | weak revert | — | *(none survives)* | no edge | underpowered 🔴 |
-| **China** | *(collecting)* | — | *(pending 10y data)* | pending | insufficient 🔴 |
+| **Japan** | no robust factor | — | *(none survives)* | technical: real null; value underpowered | no DSR survivor 🔴 · value needs EDINET key |
+| **China** | momentum/retail | — | value **tested & fails** | cheap−rich ≈ 0% (t 0.04) — powered null | DSR n/a · value edge absent ✅ tested |
 
 **The universal finding:** momentum/trend (bull regime) is the ONE metric that works in
 nearly every market and survives the Deflated-Sharpe multiple-testing correction (India
 trend, Korea breakout, Europe momentum). Mean-reversion works only in bear regimes and is
-**fragile everywhere**. Value-reversion works where the data is powered (IN/US/KR). Two
-markets (JP/CN) don't yet have enough data to conclude — and the tool says so rather than
-inventing a verdict.
+**fragile everywhere**. Value-reversion works where powered (IN/US/KR) and — now tested on
+10y data — **fails in China** (the multiple converges but doesn't reward it: a real null,
+not a data gap). Japan has **no technical factor that survives multiple-testing**; its value
+question stays underpowered until an EDINET key enables deep history. Every cell is a tested
+verdict or an explicit "needs data X" — never an invented number.
 
 ## Usage
 

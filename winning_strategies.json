@@ -58,25 +58,30 @@
       "verdict": "Momentum only (bull). Value cannot be concluded until deeper history."
     },
     "JP": {
-      "character": "weak mean-revert",
-      "book": "directional",
-      "winning_metrics": [],
-      "screen": {"long": "momentum in bull, revert in bear (directional)", "short": "NONE"},
+      "character": "weak mean-revert; no robust factor",
+      "book": "no validated edge",
+      "winning_metrics": ["(none survive multiple-testing)"],
+      "screen": {"long": "NONE validated", "short": "NONE"},
       "backtest_earnings": {
-        "all_factors": "NONE survive Deflated Sharpe (golden_cross 0.857, revert 0.105)",
-        "value": "INSUFFICIENT DATA — J-Quants free tier ~2y; depth is paywalled → underpowered"
+        "technical_factors": "TESTED — REAL NULL: no factor survives Deflated Sharpe (golden_cross DSR 0.857, revert 0.105, both < 0.95). No robust technical edge exists.",
+        "value_reversion": "UNDERPOWERED on free data (J-Quants free ~2y + yfinance ~5y = JP_merged 2020–2026, 2006 tickers, ~11 non-overlap obs). Convergence directionally right (cheap 0.46→0.51×, rich 2.72→2.42× toward median) but the return t is underpowered → cannot confirm the spread.",
+        "fix_path": "Deep JP fundamentals are free via EDINET (Japan's official filing system) but need a user-registered Subscription-Key (like DART/J-Quants). With it, ~10y history clears the power bar and the value verdict can be finalised."
       },
-      "sufficiency": "UNDERPOWERED (11 non-overlap obs) — cannot conclude",
-      "verdict": "NO validated edge — HOLD / no action until deeper (paid) data."
+      "sufficiency": "Technical: powered (real null, no edge). Value: UNDERPOWERED — needs an EDINET key for deep history.",
+      "verdict": "REAL (partial): no technical factor survives multiple-testing; value inconclusive until an EDINET key enables deep fundamentals. HOLD for now."
     },
     "CN": {
-      "character": "collecting",
-      "book": "TBD",
-      "winning_metrics": [],
-      "screen": {"long": "TBD", "short": "TBD"},
-      "backtest_earnings": {"status": "akshare 10y collection in progress (426+ tickers) — verdict pending sufficiency re-check"},
-      "sufficiency": "THIN (27%→ improving) — do not conclude yet",
-      "verdict": "PENDING — insufficient data."
+      "character": "momentum / retail-driven — value does NOT mean-revert into returns",
+      "book": "no value edge (momentum likely dominates, untested)",
+      "winning_metrics": ["(value-reversion TESTED and FAILS)"],
+      "screen": {"long": "NOT value — cheap ≠ higher return in China", "short": "NONE"},
+      "backtest_earnings": {
+        "value_reversion": "TESTED, POWERED (10y akshare 2015–2025, 426 tickers, 109 monthly formations, ~17 non-overlap 6M obs): cheap−rich = −0.31%/3M (t 0.04), +0.45%/6M (t −0.18) — NO return spread.",
+        "convergence": "The PE multiple DOES converge (rich 3.77→3.09×, cheap 0.34→0.37× toward median) — but prices don't reward it, so value is not tradeable.",
+        "interpretation": "A REAL NULL result (powered), not insufficient data: China's momentum/retail character compresses multiples without paying a value return premium."
+      },
+      "sufficiency": "POWERED (10y depth, 17 non-overlap obs) but coverage THIN (426 of ~3,454 liquid) — returns reliable, watch coverage bias; collection continues.",
+      "verdict": "REAL VERDICT: value-reversion FAILS in China (powered null). Do NOT run a value screen here; momentum likely dominates (not yet tested)."
     }
   },
   "sizing_discipline": "Inverse-vol + vol-target + kill-switch. Capacity ~$300–500k before the illiquidity edge decays (dead by $10M). All earnings are GROSS of costs (Almgren-Chriss impact) and short-borrow; net edge must clear those. The real edge is illiquidity, not size."
