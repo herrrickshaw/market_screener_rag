@@ -1,0 +1,83 @@
+{
+  "_meta": {
+    "description": "Backtested winning strategy per market. Every number traces to a point-in-time backtest in the global-market-research-platform. Research only — NOT investment advice.",
+    "generated": "2026-07-25",
+    "method": "PIT backtests; Deflated-Sharpe multiple-testing correction; non-overlapping t-stats; sufficiency-gated (only markets with enough powered+complete data get a verdict).",
+    "universal_finding": "Momentum/trend (bull regime) is the ONE metric that works in nearly every market and survives multiple-testing (IN trend, KR breakout, EU mom252). Mean-reversion works only in bear regimes and is FRAGILE everywhere (fails Deflated Sharpe). Value-reversion works where the data is powered (IN, US, KR)."
+  },
+  "markets": {
+    "IN": {
+      "character": "momentum / trend",
+      "book": "LONG-ONLY",
+      "winning_metrics": ["near-52w-high breakout (Darvas)", "50>200DMA golden cross", "trend factor", "sector-relative cheapness (low PE vs sector)"],
+      "screen": {"long": "trend up AND cheap-vs-sector AND ROE>15%", "short": "NONE"},
+      "backtest_earnings": {
+        "trend_factor": "IR 2.34 over 331 weeks; Deflated Sharpe 0.994 — SURVIVES 0.95 (the single most robust factor found)",
+        "value_reversion": "sector-relative cheap−rich = +5.3% / 6M, t 2.5 (≈ +10.9%/yr spread); multiples converge to sector median",
+        "shorting": "value+quality L/S = −1.00% / 6M, t −0.71 — FAILS; momentum runs the short leg over → never short India"
+      },
+      "sufficiency": "powered (17 non-overlap obs, 2012–2026) — coverage 50% of liquid universe (returns reliable; watch coverage bias)",
+      "verdict": "TRUST — long-only momentum + sector-relative value."
+    },
+    "US": {
+      "character": "mixed / light",
+      "book": "long-tilt, marginal short",
+      "winning_metrics": ["12-month momentum (mom252)", "short-horizon cheap-vs-market (low PE)", "cheap∩high-ROE"],
+      "screen": {"long": "cheap-vs-market (bottom PE quintile) held ≤3M", "short": "marginal — expensive∩low-ROE only"},
+      "backtest_earnings": {
+        "reversion": "cheap−rich = +1.72% / 3M, t 2.32 (≈ +6.9%/yr); FADES to +3.18%/6M t1.16 → use ≤3M horizon",
+        "value_quality_ls": "+1.66% / 6M, t 0.98 — marginal (327/338 obs)",
+        "momentum": "mom252 IR 1.19, Deflated Sharpe 0.901 — does NOT survive 0.95 (fragile); F-score is INVERTED in the US"
+      },
+      "sufficiency": "powered (17 obs, 1987–2026, 64% coverage) — TRUST short-horizon reversion",
+      "verdict": "TRUST short-horizon value reversion (≤3M), light sizing. Don't lean on US momentum."
+    },
+    "KR": {
+      "character": "mean-reversion",
+      "book": "FULL LONG-SHORT",
+      "winning_metrics": ["breakout", "cheap∩high-ROE (the 'Korea discount')", "expensive∩low-ROE (short the hollow)"],
+      "screen": {"long": "cheap (low PE vs peers) AND high ROE", "short": "expensive AND low ROE (hollow-overpriced)"},
+      "backtest_earnings": {
+        "value_quality_ls": "+4.83% / 6M, t 4.17 (≈ +9.9%/yr) — the STRONGEST edge found in any market (193/204 obs)",
+        "breakout": "IR 2.04 over 227 weeks, Deflated Sharpe 0.99 — SURVIVES 0.95",
+        "reversion": "cheap−rich = +3.85% / 6M, t 1.51 (deep DART history)"
+      },
+      "sufficiency": "powered (17 obs via DART, 96% raw / 58% liquid coverage)",
+      "verdict": "TRUST — full long/short: long cheap∩hi-ROE, short expensive∩lo-ROE."
+    },
+    "EU": {
+      "character": "momentum (bull) / mean-revert (bear)",
+      "book": "directional, long-tilt",
+      "winning_metrics": ["12-month momentum (mom252)"],
+      "screen": {"long": "12M momentum in bull regime", "short": "NONE (no fundamentals)"},
+      "backtest_earnings": {
+        "momentum": "mom252 IR 1.39 over 375 weeks, Deflated Sharpe 0.985 — SURVIVES 0.95 (bull regime)",
+        "value": "INSUFFICIENT DATA — 5y, ~9 non-overlap obs → underpowered; the headline +36% reversion was a data artifact, not an effect"
+      },
+      "sufficiency": "UNDERPOWERED for value (9 obs); momentum factor is robust",
+      "verdict": "Momentum only (bull). Value cannot be concluded until deeper history."
+    },
+    "JP": {
+      "character": "weak mean-revert",
+      "book": "directional",
+      "winning_metrics": [],
+      "screen": {"long": "momentum in bull, revert in bear (directional)", "short": "NONE"},
+      "backtest_earnings": {
+        "all_factors": "NONE survive Deflated Sharpe (golden_cross 0.857, revert 0.105)",
+        "value": "INSUFFICIENT DATA — J-Quants free tier ~2y; depth is paywalled → underpowered"
+      },
+      "sufficiency": "UNDERPOWERED (11 non-overlap obs) — cannot conclude",
+      "verdict": "NO validated edge — HOLD / no action until deeper (paid) data."
+    },
+    "CN": {
+      "character": "collecting",
+      "book": "TBD",
+      "winning_metrics": [],
+      "screen": {"long": "TBD", "short": "TBD"},
+      "backtest_earnings": {"status": "akshare 10y collection in progress (426+ tickers) — verdict pending sufficiency re-check"},
+      "sufficiency": "THIN (27%→ improving) — do not conclude yet",
+      "verdict": "PENDING — insufficient data."
+    }
+  },
+  "sizing_discipline": "Inverse-vol + vol-target + kill-switch. Capacity ~$300–500k before the illiquidity edge decays (dead by $10M). All earnings are GROSS of costs (Almgren-Chriss impact) and short-borrow; net edge must clear those. The real edge is illiquidity, not size."
+}
