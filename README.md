@@ -27,6 +27,10 @@ edge: 🟩 green = swing (validated edge), 🟥 red = take the pitch (fails), �
 data. The whole platform reduces to two green rows — **value-reversion** (IN/US/KR/JP) and
 **momentum** (IN/KR/EU); everything else is grey or red.
 
+> 🔬 **Deeper dive:** [FUNDAMENTALS_VS_SPECULATION.md](FUNDAMENTALS_VS_SPECULATION.md) — which
+> sectors price on real performance vs speculation (PB~ROE R², sector drift over time, Damodaran
+> global cross-check, and the R&D-heavy / asset-heavy accounting nuance: three regimes, not two).
+
 ## The winning strategy per market (backtested, point-in-time)
 
 | market | character | book | winning metric | historical earnings | significance |
