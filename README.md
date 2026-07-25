@@ -17,6 +17,16 @@ backtests / the data — never invented.**
 > ⚠️ **Research and education only — NOT investment advice.** All earnings are gross of
 > costs and short-borrow, on survivorship-biased universes; read spreads, not levels.
 
+## Where's the edge? The fat-pitch grid
+
+![Filter × market edge matrix](edge_matrix.png)
+
+Ted Williams only swung at pitches in his .400 zone; Buffett borrowed it — *wait for the fat
+pitch.* This grid (`edge_matrix.py`) maps every filter/strategy × market to its backtested
+edge: 🟩 green = swing (validated edge), 🟥 red = take the pitch (fails), ⬜ grey = not enough
+data. The whole platform reduces to two green rows — **value-reversion** (IN/US/KR/JP) and
+**momentum** (IN/KR/EU); everything else is grey or red.
+
 ## The winning strategy per market (backtested, point-in-time)
 
 | market | character | book | winning metric | historical earnings | significance |
