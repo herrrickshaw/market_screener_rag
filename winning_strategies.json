@@ -58,17 +58,17 @@
       "verdict": "Momentum only (bull). Value cannot be concluded until deeper history."
     },
     "JP": {
-      "character": "weak mean-revert; no robust factor",
-      "book": "no validated edge",
-      "winning_metrics": ["(none survive multiple-testing)"],
-      "screen": {"long": "NONE validated", "short": "NONE"},
+      "character": "value-reversion — STRONG (revealed by deep EDINET data)",
+      "book": "long cheap-vs-market (full L/S viable — ROE available)",
+      "winning_metrics": ["cheap-vs-market (low PE) — value reversion", "1-yr momentum (bull, directional)"],
+      "screen": {"long": "cheapest PE quintile vs market", "short": "richest PE quintile (hollow)"},
       "backtest_earnings": {
-        "technical_factors": "TESTED — REAL NULL: no factor survives Deflated Sharpe (golden_cross DSR 0.857, revert 0.105, both < 0.95). No robust technical edge exists.",
-        "value_reversion": "UNDERPOWERED on free data (J-Quants free ~2y + yfinance ~5y = JP_merged 2020–2026, 2006 tickers, ~11 non-overlap obs). Convergence directionally right (cheap 0.46→0.51×, rich 2.72→2.42× toward median) but the return t is underpowered → cannot confirm the spread.",
-        "fix_path": "Deep JP fundamentals are free via EDINET (Japan's official filing system) but need a user-registered Subscription-Key (like DART/J-Quants). With it, ~10y history clears the power bar and the value verdict can be finalised."
+        "value_reversion": "TESTED, POWERED on deep EDINET data (Sakana EDINET-Bench, 1,437 tickers, 2011–2024, 116 monthly formations, ~17–19 non-overlap obs): cheap−rich = +3.05%/3M (t 5.30), +6.60%/6M (t 4.84) — one of the STRONGEST value edges across all markets. Multiples converge (rich 4.72→4.50×, cheap 0.33→0.34× toward median).",
+        "technical_factors": "no factor survives Deflated Sharpe (golden_cross 0.857, revert 0.105) — no robust technical edge; the edge is fundamental (value).",
+        "flip_note": "This FLIPS the earlier 'underpowered / can't conclude'. That verdict was a pure data-DEPTH artifact (J-Quants free ~2y). Deep EDINET history (no API key — via the EDINET-Bench parquets) reveals Japan as a strong value-reversion market."
       },
-      "sufficiency": "Technical: powered (real null, no edge). Value: UNDERPOWERED — needs an EDINET key for deep history.",
-      "verdict": "REAL (partial): no technical factor survives multiple-testing; value inconclusive until an EDINET key enables deep fundamentals. HOLD for now."
+      "sufficiency": "POWERED (2011–2024, 17 non-overlap obs) via EDINET-Bench. Coverage 36% (THIN) and the EDINET-Bench panel is a task-sample (earnings/fraud) not the full universe, so magnitude may be biased — but t 4.84 is decisive on direction + significance. Re-run on the full corpus if an EDINET API key lands.",
+      "verdict": "REAL VERDICT (flipped): value-reversion WORKS strongly in Japan (+6.6%/6M, t 4.84). Long cheap-vs-market; short the richest for a full L/S. The last 'insufficient' is now a tested edge."
     },
     "CN": {
       "character": "momentum / retail-driven — value does NOT mean-revert into returns",

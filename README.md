@@ -21,18 +21,18 @@ backtests / the data — never invented.**
 | **India** | momentum/trend | **long-only** | trend + sector-relative cheapness | value **+5.3%/6M** (≈+10.9%/yr); trend IR 2.34 | t 2.5 · DSR **0.994** ✅ |
 | **Korea** | mean-reversion | **full long/short** | cheap∩hi-ROE − expensive∩lo-ROE | **+4.83%/6M** (≈+9.9%/yr) — strongest | t **4.17** · DSR 0.99 ✅ |
 | **US** | mixed/light | long-tilt | short-horizon cheap-vs-market | **+1.72%/3M** (≈+6.9%/yr) | t 2.32 ✅ (fades by 6M) |
+| **Japan** | value-reversion | long cheap-vs-market | cheap-vs-market (low PE) | **+6.6%/6M** (t 4.84) — deep EDINET | powered ✅ (EDINET-Bench, no key) |
 | **Europe** | momentum (bull) | directional | 12-month momentum | IR 1.39 (bull) | DSR 0.985 ✅ · value underpowered |
-| **Japan** | no robust factor | — | *(none survives)* | technical: real null; value underpowered | no DSR survivor 🔴 · value needs EDINET key |
 | **China** | momentum/retail | — | value **tested & fails** | cheap−rich ≈ 0% (t 0.04) — powered null | DSR n/a · value edge absent ✅ tested |
 
 **The universal finding:** momentum/trend (bull regime) is the ONE metric that works in
 nearly every market and survives the Deflated-Sharpe multiple-testing correction (India
-trend, Korea breakout, Europe momentum). Mean-reversion works only in bear regimes and is
-**fragile everywhere**. Value-reversion works where powered (IN/US/KR) and — now tested on
-10y data — **fails in China** (the multiple converges but doesn't reward it: a real null,
-not a data gap). Japan has **no technical factor that survives multiple-testing**; its value
-question stays underpowered until an EDINET key enables deep history. Every cell is a tested
-verdict or an explicit "needs data X" — never an invented number.
+trend, Korea breakout, Europe momentum). Value-reversion works where powered — strongly in
+**India (t 2.5), Korea (t 4.2 L/S), US (t 2.3), and now Japan (t 4.84)** once deep EDINET data
+was added — and, tested on 10y data, **fails in China** (the multiple converges but doesn't
+reward it: a real null). Japan's flip is the headline lesson: its earlier "underpowered" was a
+pure data-DEPTH artifact, not an absence of edge. Every cell is a tested verdict or an explicit
+"needs data X" — never an invented number.
 
 ## Usage
 

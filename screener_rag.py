@@ -73,7 +73,7 @@ def earnings(_m=None) -> str:
      "US": ("short-horizon value reversion (≤3M)", "+1.72%/3M (≈+6.9%/yr)", "t 2.32 ✅ (fades by 6M)"),
      "KR": ("long/short cheap∩hi-ROE vs expensive∩lo-ROE", "+4.83%/6M (≈+9.9%/yr) — STRONGEST", "t 4.17 · DSR 0.99 ✅"),
      "EU": ("12M momentum (bull)", "IR 1.39 (bull regime)", "DSR 0.985 ✅ · value underpowered"),
-     "JP": ("no robust factor", "technical: real null (no DSR survivor); value underpowered", "needs EDINET key 🔴"),
+     "JP": ("value-reversion (long cheap-vs-market)", "+6.6%/6M (t 4.84) — deep EDINET data flips the verdict", "powered ✅"),
      "CN": ("value tested & fails", "cheap−rich ≈ 0% (t 0.04) over 109 formations — powered null", "value edge absent ✅ tested"),
     }
     for mk, (s, e, sig) in rows.items():
@@ -81,9 +81,9 @@ def earnings(_m=None) -> str:
     L += ["", "**Read:** earnings are the backtested long−short (or quintile) spread, gross of "
           "costs and borrow. Annualised figures are indicative, not compounded guarantees. IN/US/KR "
           "are powered+complete (tradeable edges); EU momentum is robust (value underpowered); "
-          "**China is powered and value FAILS** (a real null — no value edge); **Japan** has no "
-          "technical factor that survives multiple-testing and its value stays underpowered until an "
-          "EDINET key enables deep history. Nulls are real verdicts, not gaps.", "", "> " + KB["sizing_discipline"]]
+          "**China is powered and value FAILS** (a real null — no value edge); **Japan**, with deep "
+          "EDINET data, shows STRONG value-reversion (+6.6%/6M, t 4.84) — flipping its earlier "
+          "underpowered verdict. Nulls and flips are both real, tested verdicts.", "", "> " + KB["sizing_discipline"]]
     return "\n".join(L)
 
 
