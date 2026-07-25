@@ -11,6 +11,9 @@ No paid API, no model download: rule-based strategy knowledge base + determinist
 screening over bundled ratios + TF-IDF retrieval (scikit-learn). **Numbers come from the
 backtests / the data — never invented.**
 
+> 📖 New to the jargon (momentum, PE, t-stat, Deflated Sharpe…)? See **[GLOSSARY.md](GLOSSARY.md)**
+> — every term in plain English with everyday analogies, no finance background needed.
+>
 > ⚠️ **Research and education only — NOT investment advice.** All earnings are gross of
 > costs and short-borrow, on survivorship-biased universes; read spreads, not levels.
 
