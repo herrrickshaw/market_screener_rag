@@ -143,6 +143,41 @@ def ask(q: str) -> str:
     return f"*(best match: {docs[i]['src']})*\n\n" + docs[i]["text"]
 
 
+PLAYBOOK = {
+ "IN": ("momentum/long-only", ["🥇 Momentum/Trend (50>200 DMA) — DSR 0.994, most robust",
+        "🥈 Value-reversion (sector-relative cheap) — +5.3%/6M t2.5", "🥈 Quality (hi-ROE) behind liquidity gate",
+        "🚫 Never short (value+quality L/S −1%/6M)"]),
+ "US": ("mixed/light", ["🥇 Short-horizon cheap-vs-market (≤3M) — +1.7%/3M t2.3",
+        "⚙️ Light factor + insider (Form 4) + passive core", "🚫 Piotroski INVERTED in US"]),
+ "KR": ("mean-reversion/L-S", ["🥇 Value+Quality L/S — +4.83%/6M t4.17 GROSS, but +2.3%/6M t2.0 NET of 5% borrow (halved)",
+        "🥈 Breakout (DSR 0.99) · value-reversion · hi-ROE Korea discount", "⚠️ needs a cheap, reliable locate"]),
+ "JP": ("value-reversion", ["🥇 Value-reversion (cheap PE) — +6.6%/6M t4.84 (strongest value anywhere)",
+        "🥈 Value+Quality L/S (net of borrow)", "🚫 Momentum fails (no DSR survivor)"]),
+ "EU": ("momentum", ["🥇 12-month momentum (mom252) — DSR 0.985", "⚙️ passive + insider",
+        "— value underpowered (can't recommend)"]),
+ "CN": ("speculation-ruled", ["🥇 PASSIVE / index only", "🚫 Value-reversion tested & FAILS (t0.3, 1993×10y)",
+        "🚫 Momentum ALSO fails at 6M (t−0.2) — any CN momentum is fast/retail-inaccessible",
+        "ℹ️ SOE core (utilities) is fundamentally-priced, but the tradeable growth-periphery is speculative"]),
+}
+RULES = ["Horizon: monthly–6M only (fast signals lose to the information-asymmetry tax).",
+         "Sizing: inverse-vol + vol-target + kill-switch. Capacity ~$300–500k (illiquidity edge).",
+         "Read spreads, not win-rate (~50% hit-rate is normal — the edge is magnitude).",
+         "Short only where the market mean-reverts (KR ✅), never in a trending one (IN 🚫).",
+         "Net of costs/borrow: KR L/S halves, US L/S turns negative — borrow is decisive."]
+
+
+def playbook(market: str = "") -> str:
+    mk = _mk(market) or (market.upper() if market else None)
+    L = ["# Market playbook — retail-accessible edges, ranked (backtested)", ""]
+    for m in (["IN", "US", "KR", "JP", "EU", "CN"] if not mk else [mk]):
+        ch, rows = PLAYBOOK[m]
+        L += [f"## {NAMES[m]} — *{ch}*", ""] + [f"- {r}" for r in rows] + [""]
+    if not mk:
+        L += ["## Rules everywhere", ""] + [f"- {r}" for r in RULES]
+    L += ["", "> Every ranking traces to a committed backtest. Research, not investment advice."]
+    return "\n".join(L)
+
+
 def main() -> int:
     a = sys.argv[1:]
     if not a:
@@ -157,6 +192,8 @@ def main() -> int:
         print(earnings())
     elif cmd == "universal":
         print(universal())
+    elif cmd == "playbook":
+        print(playbook(rest))
     elif cmd == "ask":
         print(ask(rest))
     else:
