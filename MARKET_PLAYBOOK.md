@@ -46,10 +46,32 @@ Only durable + retail-harvestable edges (low information-asymmetry tax). Ranked 
 
 ## CN — *speculation-ruled — passive only*
 
-- ⚙️ base — **Momentum / Trend** — untested but character-implied; use with care
+- 🥈 secondary — **Momentum / Trend** — breakout +2.77%/21d bull-gated (2026-07 replay); costs are the constraint
 - ⚙️ base — **Passive core (DCA+rebalance)** — always-on base: DCA + annual rebalance, vol-targeted
 - 🚫 AVOID — **Value-reversion (cheap PE)** — TESTED & FAILS (t0.3) — do not run
 - 🚫 AVOID — **Value+Quality Long/Short** — value leg fails
+
+## Regime gating (2026-07 full-history replay)
+
+10y Darvas replay, ~470k signals, top-1000 liquid universe per market, regimes
+point-in-time from a trimmed top-20 blue-chip basket (trend: EMA100
+position+slope; vol: expanding percentile). Date-clustered stats. Source:
+[price_prediction_backtest](https://github.com/herrrickshaw/price_prediction_backtest)
+`docs/HISTORICAL_REPLAY.md`.
+
+- **Gate every breakout entry on market trend regime.** Breakout-buy 21d excess, bull vs bear:
+  KR +3.54% vs +1.56% · CN +2.77% vs +1.62% · IN +2.08% vs +0.57% (dead) ·
+  JP +0.80% vs −0.11% (dead) · US +0.66% vs **−0.85% (harmful)**.
+  The gate roughly doubles the buy leg everywhere; bear-regime breakouts are
+  dead in US/JP/IN.
+- **Breakdown-sell is contrarian, not a short signal** — breakdown names
+  *outperform* peers +1.0–1.6% at 21d in bear regimes in all five markets.
+  Use as a mean-reversion watch list; never short breakdowns.
+- **Prefer LOW/MID-vol regimes for breakouts** (KR LOW-vol +4.67% t8.2; wins
+  in 4 of 5 markets). A 6-date live sample said the opposite (HIGH-vol) —
+  overturned by the full replay; distrust regime reads from short windows.
+- CN momentum upgraded from "untested, character-implied" to **tested**:
+  +2.77% bull-gated at 21d (before CN's heavy round-trip costs).
 
 ## Rules that apply everywhere
 
