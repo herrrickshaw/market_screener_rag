@@ -162,7 +162,7 @@ robust while the rest are called fragile.
   Schultz (2012), high-low spread estimator, JF.
 - **Factor selection:** Tibshirani (1996), *Regression Shrinkage and Selection via the Lasso*,
   JRSS-B (used in the learned model, in shadow mode).
-- **Market microstructure / HFT context:** Gomber et al., *High-Frequency Trading* (used to
+- **Market microstructure / HFT context:** Gomber, Arndt, Lutat & Uhle (2011), *High-Frequency Trading* (SSRN 1858626) (used to
   inform orchestration and cost realism), and the `baobach/hft_papers` reading list.
 - **Japanese financial data & the LLM-vs-baseline result:** Sugiura, Ishida, Makino, Tazuke,
   Nakagawa, Nakago & Ha (2025), *EDINET-Bench* (Sakana AI), arXiv:2506.08762 — source of the
