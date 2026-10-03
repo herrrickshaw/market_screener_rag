@@ -1,0 +1,110 @@
+{
+  "edge_matrix.py": {
+    "mtime": 1784959680.209725,
+    "seen": 1789968865.8543758,
+    "ast_hash": "503d802ef9b8460ac4f44936827001ec",
+    "semantic_hash": ""
+  },
+  "screener_rag.py": {
+    "mtime": 1784967302.215389,
+    "seen": 1789968865.854382,
+    "ast_hash": "7a5a4b30f99f29b740ced968e1a06e8c",
+    "semantic_hash": ""
+  },
+  "winning_strategies.json": {
+    "mtime": 1784966346.933813,
+    "seen": 1789968865.854387,
+    "ast_hash": "632c2ac3b5c5352e69a05395344d45b0",
+    "semantic_hash": ""
+  },
+  ".github/workflows/quality-gates.yml": {
+    "mtime": 1785628551.118798,
+    "seen": 1789968865.854392,
+    "ast_hash": "4e9413c1b2b89f6c00da0a3cb06b78be",
+    "semantic_hash": ""
+  },
+  "FUNDAMENTALS_VS_SPECULATION.md": {
+    "mtime": 1784962426.50243,
+    "seen": 1789968865.8543959,
+    "ast_hash": "013e495fca58d93c2af7171f14357837",
+    "semantic_hash": ""
+  },
+  "GLOSSARY.md": {
+    "mtime": 1784957425.477271,
+    "seen": 1789968865.854398,
+    "ast_hash": "5fdf70436de3eab489c3d46de9a69f7e",
+    "semantic_hash": ""
+  },
+  "MARKET_PLAYBOOK.md": {
+    "mtime": 1785158558.684583,
+    "seen": 1789968865.854401,
+    "ast_hash": "b83c1ec42b7a205e40ac2048e9217fc3",
+    "semantic_hash": ""
+  },
+  "PROJECT_RETROSPECTIVE.md": {
+    "mtime": 1784964798.625081,
+    "seen": 1789968865.854403,
+    "ast_hash": "f104e5435d25a0811fa0f3cad9b7a52d",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785596673.638243,
+    "seen": 1789193335.0834749,
+    "ast_hash": "01d5250b6ef296877c0ead97197bde03",
+    "semantic_hash": ""
+  },
+  "WHY_THESE_WIN.md": {
+    "mtime": 1785595863.039104,
+    "seen": 1789968865.854412,
+    "ast_hash": "4659beb92fcea3524e6522f681bb5cde",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1784953356.780719,
+    "seen": 1789968865.854414,
+    "ast_hash": "8a337ebc7810321eb1d5dc02911d6a04",
+    "semantic_hash": ""
+  },
+  "damodaran_speculation.png": {
+    "mtime": 1784961252.187376,
+    "seen": 1789968865.854416,
+    "ast_hash": "7bef37de60ff706dffbf37110ca44697",
+    "semantic_hash": ""
+  },
+  "edge_matrix.png": {
+    "mtime": 1784959680.202696,
+    "seen": 1789968865.854419,
+    "ast_hash": "91fad07941fdbdd71a20462ebc7df4a5",
+    "semantic_hash": ""
+  },
+  "fundamentals_vs_speculation.png": {
+    "mtime": 1784961252.186277,
+    "seen": 1789968865.854421,
+    "ast_hash": "b48d5e42a8fac8c1f09e44a8318b8514",
+    "semantic_hash": ""
+  },
+  "market_playbook.png": {
+    "mtime": 1784963295.620056,
+    "seen": 1789968865.854424,
+    "ast_hash": "0e75bc599e132e5e938f048d0f9e352b",
+    "semantic_hash": ""
+  },
+  "project_retrospective.png": {
+    "mtime": 1784964798.629976,
+    "seen": 1789968865.8544261,
+    "ast_hash": "c007525e6b60994a870ad96a79c27355",
+    "semantic_hash": ""
+  },
+  "sector_valuation_history.png": {
+    "mtime": 1784961252.187837,
+    "seen": 1789968865.8544278,
+    "ast_hash": "76e2df23f51dc4749967a40bb0d9406e",
+    "semantic_hash": ""
+  },
+  "strategy_evaluation.png": {
+    "mtime": 1784963295.62152,
+    "seen": 1789193335.083481,
+    "ast_hash": "e39b8c5756386a7486a8e33ff2a35b21",
+    "semantic_hash": ""
+  }
+}

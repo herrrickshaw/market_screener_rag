@@ -1,0 +1,1614 @@
+{
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "nodes": [
+    {
+      "id": "edge_matrix",
+      "label": "edge_matrix.py",
+      "file_type": "code",
+      "source_file": "edge_matrix.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "edge_matrix_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "edge_matrix.py",
+      "source_location": "L51",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "edge_matrix_rationale_2",
+      "label": "edge_matrix.py — the Ted Williams / Buffett \"fat-pitch\" grid: filter/strategy ×…",
+      "file_type": "rationale",
+      "source_file": "edge_matrix.py",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "screener_rag",
+      "label": "screener_rag.py",
+      "file_type": "code",
+      "source_file": "screener_rag.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "screener_rag_mk",
+      "label": "_mk()",
+      "file_type": "code",
+      "source_file": "screener_rag.py",
+      "source_location": "L30",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "screener_rag_ratios",
+      "label": "_ratios()",
+      "file_type": "code",
+      "source_file": "screener_rag.py",
+      "source_location": "L38",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataframe",
+      "label": "DataFrame",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "screener_rag_clusters",
+      "label": "_clusters()",
+      "file_type": "code",
+      "source_file": "screener_rag.py",
+      "source_location": "L45",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "screener_rag_strategy",
+      "label": "strategy()",
+      "file_type": "code",
+      "source_file": "screener_rag.py",
+      "source_location": "L52",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "screener_rag_earnings",
+      "label": "earnings()",
+      "file_type": "code",
+      "source_file": "screener_rag.py",
+      "source_location": "L68",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "screener_rag_universal",
+      "label": "universal()",
+      "file_type": "code",
+      "source_file": "screener_rag.py",
+      "source_location": "L90",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "screener_rag_screen",
+      "label": "screen()",
+      "file_type": "code",
+      "source_file": "screener_rag.py",
+      "source_location": "L99",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "screener_rag_ask",
+      "label": "ask()",
+      "file_type": "code",
+      "source_file": "screener_rag.py",
+      "source_location": "L131",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "screener_rag_playbook",
+      "label": "playbook()",
+      "file_type": "code",
+      "source_file": "screener_rag.py",
+      "source_location": "L169",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "screener_rag_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "screener_rag.py",
+      "source_location": "L181",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "screener_rag_rationale_2",
+      "label": "screener_rag.py — a credit-free, offline RAG that runs on the METRICS THAT WORK…",
+      "file_type": "rationale",
+      "source_file": "screener_rag.py",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "screener_rag_rationale_39",
+      "label": "current fundamentals ratios for a market (bundled snapshot).",
+      "file_type": "rationale",
+      "source_file": "screener_rag.py",
+      "source_location": "L39",
+      "_origin": "ast"
+    },
+    {
+      "id": "fundamentals_vs_speculation",
+      "label": "FUNDAMENTALS_VS_SPECULATION.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "fundamentals_vs_speculation_fundamentals_vs_speculation_where_valuation_tracks_performance_and_where_it_doesn_t",
+      "label": "Fundamentals vs speculation — where valuation tracks performance, and where it doesn't",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "fundamentals_vs_speculation_1_the_cross_section_pb_roe_r2_fundamentals_vs_speculation_py",
+      "label": "1. The cross-section: PB ~ ROE R² (`fundamentals_vs_speculation.py`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "fundamentals_vs_speculation_2_the_time_dimension_sector_drift_fundamentals_vs_speculation_ts_py",
+      "label": "2. The time dimension: sector drift (`fundamentals_vs_speculation_ts.py`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "fundamentals_vs_speculation_3_the_authoritative_cross_check_damodaran_damodaran_speculation_py",
+      "label": "3. The authoritative cross-check: Damodaran (`damodaran_speculation.py`)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L29",
+      "_origin": "ast"
+    },
+    {
+      "id": "fundamentals_vs_speculation_crucial_refinement_accounting_distorts_the_metrics_not_everything_low_roe_is_speculation",
+      "label": "⚠️ Crucial refinement: accounting distorts the metrics — not everything low-ROE is speculation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L47",
+      "_origin": "ast"
+    },
+    {
+      "id": "fundamentals_vs_speculation_why_this_matters_for_the_strategy_the_payoff",
+      "label": "Why this matters for the strategy (the payoff)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L75",
+      "_origin": "ast"
+    },
+    {
+      "id": "fundamentals_vs_speculation_literature_corroboration_the_mechanism_is_well_established",
+      "label": "Literature corroboration (the mechanism is well-established)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L90",
+      "_origin": "ast"
+    },
+    {
+      "id": "fundamentals_vs_speculation_data_caveats",
+      "label": "Data & caveats",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L118",
+      "_origin": "ast"
+    },
+    {
+      "id": "glossary",
+      "label": "GLOSSARY.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "glossary_plain_english_glossary",
+      "label": "Plain-English glossary",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "glossary_the_big_ideas_what_strategy_are_we_even_running",
+      "label": "The big ideas (what strategy are we even running?)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "glossary_judging_if_a_stock_is_cheap_or_expensive",
+      "label": "Judging if a stock is cheap or expensive",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L23",
+      "_origin": "ast"
+    },
+    {
+      "id": "glossary_how_we_bet_the_mechanics",
+      "label": "How we bet (the mechanics)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L35",
+      "_origin": "ast"
+    },
+    {
+      "id": "glossary_testing_whether_a_strategy_actually_works",
+      "label": "Testing whether a strategy actually works",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L46",
+      "_origin": "ast"
+    },
+    {
+      "id": "glossary_data_honesty_how_backtests_fool_you_if_you_re_careless",
+      "label": "Data honesty (how backtests fool you if you're careless)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L69",
+      "_origin": "ast"
+    },
+    {
+      "id": "glossary_costs_liquidity_and_how_much_money_it_can_hold",
+      "label": "Costs, liquidity, and how much money it can hold",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L82",
+      "_origin": "ast"
+    },
+    {
+      "id": "glossary_managing_risk",
+      "label": "Managing risk",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L96",
+      "_origin": "ast"
+    },
+    {
+      "id": "glossary_quality_modelling_tools",
+      "label": "Quality & modelling tools",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L107",
+      "_origin": "ast"
+    },
+    {
+      "id": "glossary_where_the_data_comes_from",
+      "label": "Where the data comes from",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L123",
+      "_origin": "ast"
+    },
+    {
+      "id": "glossary_the_tools_we_built",
+      "label": "The tools we built",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L131",
+      "_origin": "ast"
+    },
+    {
+      "id": "market_playbook",
+      "label": "MARKET_PLAYBOOK.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "market_playbook_market_playbook_retail_accessible_edges_ranked_by_priority_per_market",
+      "label": "Market playbook — retail-accessible edges, ranked by priority per market",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "market_playbook_in_momentum_long_only",
+      "label": "IN — *momentum / long-only*",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "market_playbook_us_mixed_efficient_light",
+      "label": "US — *mixed / efficient — light*",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "market_playbook_kr_mean_reversion_full_l_s",
+      "label": "KR — *mean-reversion / full L/S*",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L23",
+      "_origin": "ast"
+    },
+    {
+      "id": "market_playbook_jp_value_reversion",
+      "label": "JP — *value-reversion*",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L32",
+      "_origin": "ast"
+    },
+    {
+      "id": "market_playbook_eu_momentum_bull",
+      "label": "EU — *momentum (bull)*",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L41",
+      "_origin": "ast"
+    },
+    {
+      "id": "market_playbook_cn_speculation_ruled_passive_only",
+      "label": "CN — *speculation-ruled — passive only*",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L47",
+      "_origin": "ast"
+    },
+    {
+      "id": "market_playbook_regime_gating_2026_07_full_history_replay",
+      "label": "Regime gating (2026-07 full-history replay)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L54",
+      "_origin": "ast"
+    },
+    {
+      "id": "market_playbook_rules_that_apply_everywhere",
+      "label": "Rules that apply everywhere",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L76",
+      "_origin": "ast"
+    },
+    {
+      "id": "project_retrospective",
+      "label": "PROJECT_RETROSPECTIVE.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "PROJECT_RETROSPECTIVE.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "project_retrospective_project_retrospective_findings_gaps_and_what_to_publish",
+      "label": "Project retrospective — findings, gaps, and what to publish",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "PROJECT_RETROSPECTIVE.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "project_retrospective_the_analysis_arc_phases",
+      "label": "The analysis arc (phases)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "PROJECT_RETROSPECTIVE.md",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "project_retrospective_consolidated_findings",
+      "label": "Consolidated findings",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "PROJECT_RETROSPECTIVE.md",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "project_retrospective_gaps_to_fix_prioritised_by_impact_effort",
+      "label": "Gaps to fix (prioritised by impact ÷ effort)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "PROJECT_RETROSPECTIVE.md",
+      "source_location": "L32",
+      "_origin": "ast"
+    },
+    {
+      "id": "project_retrospective_the_quick_high_impact_fixes_do_next",
+      "label": "The quick, high-impact fixes (do next)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "PROJECT_RETROSPECTIVE.md",
+      "source_location": "L48",
+      "_origin": "ast"
+    },
+    {
+      "id": "project_retrospective_what_to_publish",
+      "label": "What to publish",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "PROJECT_RETROSPECTIVE.md",
+      "source_location": "L55",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_market_screener_rag",
+      "label": "market-screener-rag",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_where_s_the_edge_the_fat_pitch_grid",
+      "label": "Where's the edge? The fat-pitch grid",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_the_winning_strategy_per_market_backtested_point_in_time",
+      "label": "The winning strategy per market (backtested, point-in-time)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L34",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_usage",
+      "label": "Usage",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_how_it_works",
+      "label": "How it works",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_the_overall_trading_approach_in_one_paragraph",
+      "label": "The overall trading approach (in one paragraph)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L78",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_assumptions_stated_explicitly_because_they_bound_every_number",
+      "label": "Assumptions (stated explicitly, because they bound every number)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L92",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_how_to_read_the_results_quantitatively",
+      "label": "How to read the results — quantitatively",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L119",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_how_to_read_the_results_qualitatively",
+      "label": "How to read the results — qualitatively",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L134",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_literature_the_inference_methods_and_where_they_come_from",
+      "label": "Literature — the inference methods and where they come from",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L148",
+      "_origin": "ast"
+    },
+    {
+      "id": "why_these_win",
+      "label": "WHY_THESE_WIN.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "why_these_win_why_these_filters_win_the_economics_behind_the_fat_pitches",
+      "label": "Why these filters win — the economics behind the fat pitches",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "why_these_win_1_value_reversion_cheap_vs_peers_the_widest_edge_in_us_kr_jp",
+      "label": "1. Value-reversion (cheap-vs-peers) — the widest edge (IN, US, KR, JP)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "why_these_win_2_value_quality_long_short_korea_s_standout_4_8_6m_t_4_2",
+      "label": "2. Value + Quality long/short — Korea's standout (+4.8%/6M, t 4.2)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L47",
+      "_origin": "ast"
+    },
+    {
+      "id": "why_these_win_3_momentum_trend_the_universal_survivor_in_kr_eu",
+      "label": "3. Momentum / trend — the universal survivor (IN, KR, EU)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L78",
+      "_origin": "ast"
+    },
+    {
+      "id": "why_these_win_why_the_losers_lose_justifying_the_red_cells",
+      "label": "Why the losers lose (justifying the red cells)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L109",
+      "_origin": "ast"
+    },
+    {
+      "id": "why_these_win_overarching_caveats_data_method",
+      "label": "Overarching caveats (data + method)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L123",
+      "_origin": "ast"
+    },
+    {
+      "id": "why_these_win_the_honest_meta_point_our_data_vs_the_literature",
+      "label": "The honest meta-point (our data vs the literature)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L141",
+      "_origin": "ast"
+    }
+  ],
+  "links": [
+    {
+      "source": "edge_matrix",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "edge_matrix.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "edge_matrix",
+      "target": "numpy",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "edge_matrix.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "edge_matrix",
+      "target": "pandas",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "edge_matrix.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "edge_matrix",
+      "target": "matplotlib",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "edge_matrix.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "edge_matrix",
+      "target": "matplotlib_pyplot",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "edge_matrix.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "edge_matrix",
+      "target": "edge_matrix_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "edge_matrix.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "edge_matrix_rationale_2",
+      "target": "edge_matrix",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "edge_matrix.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "sys",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "re",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "pandas",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "screener_rag_mk",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "screener_rag_ratios",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_ratios",
+      "target": "dataframe",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "screener_rag_clusters",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_clusters",
+      "target": "dataframe",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "screener_rag_strategy",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "screener_rag_earnings",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "screener_rag_universal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "screener_rag_screen",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "screener_rag_ask",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "screener_rag_playbook",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L169",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag",
+      "target": "screener_rag_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L181",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_screen",
+      "target": "screener_rag_clusters",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L105",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_ask",
+      "target": "screener_rag_strategy",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_ask",
+      "target": "screener_rag_universal",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_ask",
+      "target": "screener_rag_earnings",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_playbook",
+      "target": "screener_rag_mk",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L170",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_main",
+      "target": "screener_rag_strategy",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L188",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_main",
+      "target": "screener_rag_mk",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L188",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_main",
+      "target": "screener_rag_screen",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L190",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_main",
+      "target": "screener_rag_earnings",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L192",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_main",
+      "target": "screener_rag_universal",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L194",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_main",
+      "target": "screener_rag_playbook",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L196",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_main",
+      "target": "screener_rag_ask",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L198",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_rationale_2",
+      "target": "screener_rag",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "screener_rag_rationale_39",
+      "target": "screener_rag_ratios",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "screener_rag.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "fundamentals_vs_speculation",
+      "target": "fundamentals_vs_speculation_fundamentals_vs_speculation_where_valuation_tracks_performance_and_where_it_doesn_t",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "fundamentals_vs_speculation_fundamentals_vs_speculation_where_valuation_tracks_performance_and_where_it_doesn_t",
+      "target": "fundamentals_vs_speculation_1_the_cross_section_pb_roe_r2_fundamentals_vs_speculation_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "fundamentals_vs_speculation_fundamentals_vs_speculation_where_valuation_tracks_performance_and_where_it_doesn_t",
+      "target": "fundamentals_vs_speculation_2_the_time_dimension_sector_drift_fundamentals_vs_speculation_ts_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "fundamentals_vs_speculation_fundamentals_vs_speculation_where_valuation_tracks_performance_and_where_it_doesn_t",
+      "target": "fundamentals_vs_speculation_3_the_authoritative_cross_check_damodaran_damodaran_speculation_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "fundamentals_vs_speculation_fundamentals_vs_speculation_where_valuation_tracks_performance_and_where_it_doesn_t",
+      "target": "fundamentals_vs_speculation_crucial_refinement_accounting_distorts_the_metrics_not_everything_low_roe_is_speculation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "fundamentals_vs_speculation_fundamentals_vs_speculation_where_valuation_tracks_performance_and_where_it_doesn_t",
+      "target": "fundamentals_vs_speculation_why_this_matters_for_the_strategy_the_payoff",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "fundamentals_vs_speculation_fundamentals_vs_speculation_where_valuation_tracks_performance_and_where_it_doesn_t",
+      "target": "fundamentals_vs_speculation_literature_corroboration_the_mechanism_is_well_established",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "fundamentals_vs_speculation_fundamentals_vs_speculation_where_valuation_tracks_performance_and_where_it_doesn_t",
+      "target": "fundamentals_vs_speculation_data_caveats",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "FUNDAMENTALS_VS_SPECULATION.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "glossary",
+      "target": "glossary_plain_english_glossary",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "glossary_plain_english_glossary",
+      "target": "glossary_the_big_ideas_what_strategy_are_we_even_running",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "glossary_plain_english_glossary",
+      "target": "glossary_judging_if_a_stock_is_cheap_or_expensive",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "glossary_plain_english_glossary",
+      "target": "glossary_how_we_bet_the_mechanics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "glossary_plain_english_glossary",
+      "target": "glossary_testing_whether_a_strategy_actually_works",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "glossary_plain_english_glossary",
+      "target": "glossary_data_honesty_how_backtests_fool_you_if_you_re_careless",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "glossary_plain_english_glossary",
+      "target": "glossary_costs_liquidity_and_how_much_money_it_can_hold",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "glossary_plain_english_glossary",
+      "target": "glossary_managing_risk",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "glossary_plain_english_glossary",
+      "target": "glossary_quality_modelling_tools",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "glossary_plain_english_glossary",
+      "target": "glossary_where_the_data_comes_from",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "glossary_plain_english_glossary",
+      "target": "glossary_the_tools_we_built",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GLOSSARY.md",
+      "source_location": "L131",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "market_playbook",
+      "target": "market_playbook_market_playbook_retail_accessible_edges_ranked_by_priority_per_market",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "market_playbook_market_playbook_retail_accessible_edges_ranked_by_priority_per_market",
+      "target": "market_playbook_in_momentum_long_only",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "market_playbook_market_playbook_retail_accessible_edges_ranked_by_priority_per_market",
+      "target": "market_playbook_us_mixed_efficient_light",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "market_playbook_market_playbook_retail_accessible_edges_ranked_by_priority_per_market",
+      "target": "market_playbook_kr_mean_reversion_full_l_s",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "market_playbook_market_playbook_retail_accessible_edges_ranked_by_priority_per_market",
+      "target": "market_playbook_jp_value_reversion",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "market_playbook_market_playbook_retail_accessible_edges_ranked_by_priority_per_market",
+      "target": "market_playbook_eu_momentum_bull",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "market_playbook_market_playbook_retail_accessible_edges_ranked_by_priority_per_market",
+      "target": "market_playbook_cn_speculation_ruled_passive_only",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "market_playbook_market_playbook_retail_accessible_edges_ranked_by_priority_per_market",
+      "target": "market_playbook_regime_gating_2026_07_full_history_replay",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "market_playbook_market_playbook_retail_accessible_edges_ranked_by_priority_per_market",
+      "target": "market_playbook_rules_that_apply_everywhere",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MARKET_PLAYBOOK.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "project_retrospective",
+      "target": "project_retrospective_project_retrospective_findings_gaps_and_what_to_publish",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_RETROSPECTIVE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "project_retrospective_project_retrospective_findings_gaps_and_what_to_publish",
+      "target": "project_retrospective_the_analysis_arc_phases",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_RETROSPECTIVE.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "project_retrospective_project_retrospective_findings_gaps_and_what_to_publish",
+      "target": "project_retrospective_consolidated_findings",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_RETROSPECTIVE.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "project_retrospective_project_retrospective_findings_gaps_and_what_to_publish",
+      "target": "project_retrospective_gaps_to_fix_prioritised_by_impact_effort",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_RETROSPECTIVE.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "project_retrospective_gaps_to_fix_prioritised_by_impact_effort",
+      "target": "project_retrospective_the_quick_high_impact_fixes_do_next",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_RETROSPECTIVE.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "project_retrospective_project_retrospective_findings_gaps_and_what_to_publish",
+      "target": "project_retrospective_what_to_publish",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT_RETROSPECTIVE.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme",
+      "target": "readme_market_screener_rag",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme",
+      "target": "glossary",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_market_screener_rag",
+      "target": "readme_where_s_the_edge_the_fat_pitch_grid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme",
+      "target": "fundamentals_vs_speculation",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_market_screener_rag",
+      "target": "readme_the_winning_strategy_per_market_backtested_point_in_time",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_market_screener_rag",
+      "target": "readme_usage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_market_screener_rag",
+      "target": "readme_how_it_works",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_market_screener_rag",
+      "target": "readme_the_overall_trading_approach_in_one_paragraph",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_market_screener_rag",
+      "target": "readme_assumptions_stated_explicitly_because_they_bound_every_number",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_market_screener_rag",
+      "target": "readme_how_to_read_the_results_quantitatively",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_market_screener_rag",
+      "target": "readme_how_to_read_the_results_qualitatively",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L134",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_market_screener_rag",
+      "target": "readme_literature_the_inference_methods_and_where_they_come_from",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L148",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "why_these_win",
+      "target": "why_these_win_why_these_filters_win_the_economics_behind_the_fat_pitches",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "why_these_win",
+      "target": "users_umashankar_repos_market_screener_rag_methodology_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "why_these_win_why_these_filters_win_the_economics_behind_the_fat_pitches",
+      "target": "why_these_win_1_value_reversion_cheap_vs_peers_the_widest_edge_in_us_kr_jp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "why_these_win_why_these_filters_win_the_economics_behind_the_fat_pitches",
+      "target": "why_these_win_2_value_quality_long_short_korea_s_standout_4_8_6m_t_4_2",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "why_these_win_why_these_filters_win_the_economics_behind_the_fat_pitches",
+      "target": "why_these_win_3_momentum_trend_the_universal_survivor_in_kr_eu",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "why_these_win_why_these_filters_win_the_economics_behind_the_fat_pitches",
+      "target": "why_these_win_why_the_losers_lose_justifying_the_red_cells",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "why_these_win_why_these_filters_win_the_economics_behind_the_fat_pitches",
+      "target": "why_these_win_overarching_caveats_data_method",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "why_these_win_why_these_filters_win_the_economics_behind_the_fat_pitches",
+      "target": "why_these_win_the_honest_meta_point_our_data_vs_the_literature",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "WHY_THESE_WIN.md",
+      "source_location": "L141",
+      "weight": 1.0,
+      "_origin": "ast"
+    }
+  ],
+  "directed": false
+}
