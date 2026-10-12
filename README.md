@@ -1,5 +1,9 @@
 # market-screener-rag
 
+<!-- how-to-use-with-ai -->
+> **New here?** See [How to use this repo with AI (Claude, Gemini, ChatGPT)](HOW_TO_USE_WITH_AI.md) — clone it, paste it into an AI tool, and ask in plain English.
+
+
 A **credit-free, offline** retrieval + screening tool that runs on the **metrics that
 actually work in each market** — the backtested, multiple-testing-survived winning
 strategies from a multi-market systematic research platform (India, US, Korea, Japan,
