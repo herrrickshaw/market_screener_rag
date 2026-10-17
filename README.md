@@ -173,4 +173,45 @@ robust while the rest are called fragile.
   deep Japan panel used here, and independent corroboration that a **naive persistence
   (momentum) baseline is hard to beat**, which matches our universal-momentum finding.
 
+## Literature context
+
+Entries from `market-pipeline/research/LITERATURE_REGISTER.md` (as of 2026-10-17) relevant to this repo's inference
+claims (DSR/multiple testing, gross-of-cost earnings, survivorship, point-in-time, per-market character). Grades
+are the register's own wording; "no explicit grade" means the entry carries none. Pointers only, not endorsement
+of this repo's numbers.
+
+| Entry (ID) | Register grade | Relevance here |
+|---|---|---|
+| 2608.23808 MinervaScore: luck or edge? | no explicit grade | Composite of DSR, PBO, SPA, MinTRL and a regime check; on pre-registered real data its score showed no significant forward relationship (rho 0.013, p=0.40) and only a "modest" gain over corrected DSR alone. Register: the pipeline has real DSR, PBO cited but not implemented, and lacks MinTRL. |
+| 2604.15531 Spurious predictability in financial ML | moderate (1,000 MC replications; single author; costs in appendix) | Effective multiplicity `K_eff` and null-panel falsification; relevant to counting correlated factors as independent trials in the DSR. |
+| 2608.27734 Leakage-safe, search-aware evaluation | no explicit grade (Sharpe, DSR and PBO with costs modelled) | Zero LLM-discovered strategies survived; best design Sharpe 1.69 fell to 0.18 out of sample (DSR 0.86). Register uses it for the evaluation harness, not the LLM part. |
+| 2607.06502 What Useful Alphas? | strong (US only) | Post-2005 "Standard" universe median 7bp/mo; register calls momentum and value "essentially dead" there. Compare with this repo's US claims, noting the US-only caveat. |
+| Baldi-Lanfranchi (2024), Transaction-cost-aware Factors (not on arXiv) | medium-strong | Momentum nets roughly nothing after costs under full rebalancing; relevant to the "gross of costs" caveat. |
+| 2603.01820 Deep learning for financial time series benchmark | strong on protocol, off-scope on models | Source of the absolute breakeven-friction idea in queue item 23. |
+| 0810.1922 Look-ahead benchmark bias | high | Benchmark-side survivorship up to 8%/yr (CRSP 1926-2006); relevant to the "read spreads, not levels" assumption. |
+| 2603.19380 Survivorship bias, NIFTY Smallcap 250 | moderate-to-weak | +4.94pp/yr survivor premium, gross of costs; the register notes a self-contradicting p-value. |
+| 2605.23959 When alpha disappears (decision-time leakage) | no explicit grade | Centered rolling statistics and open-execution conventions inflate Sharpe massively; the toggled conventions are a checklist for the point-in-time assumption. |
+| 2609.26303 Target alignment and forecast selection | medium, with an honest null | Equal-weight admission of a misaligned signal dilutes; register links it to the US-inverted Piotroski finding. |
+| Regional/regime literature survey (2026-08-23, no arXiv ID) | agent-sourced survey; the register's labels are relevance ratings, not evidence grades | Balvers & Wu 2006 rated "very high" (momentum and mean reversion coexist, weights differ by country); JBF 2023 India, liquidity-conditional momentum/reversal rated "high"; Korea reversal papers "moderate-high"; Asness 2011 on Japan "high but self-interested". |
+| 2605.31201 Point-in-time financial RAG with frozen LLMs | none; the register discards it | Logged as inapplicable (LLM retrieval architecture with per-query spend). Not relevant to this offline TF-IDF design. |
+
+## Open questions from literature
+
+From `market-pipeline/research/BACKTEST_QUEUE.md`. None run for this repo.
+
+- Item 19: is each DSR pass backed by enough history (Minimum Track Record Length vs observations)? Relevant to the README's "at least 15 obs" bar.
+- Item 24 and 33: widen the DSR trial count to the whole search ledger, and report it under effective multiplicity (`K_eff`).
+- Item 46: pass empirical skew and kurtosis into the DSR and check whether one window carries the chosen factor.
+- Item 23 and 49: report breakeven bps per market instead of assuming costs, and a cost by holding-period grid (README states earnings are gross of costs).
+- Item 36: re-score in a traded-value-coverage universe, value-weighted, to see which market cells are microcap effects (README: capacity is illiquidity-driven).
+- Item 42: report edge against both equal-weight and cap-weight benchmarks, split by concentration regime.
+- Item 44: leave-one-screen-out test of a multi-screen vote, including the US-inverted Piotroski.
+- Items 5 and 11: use real `filed` availability dates rather than FYE+90d where possible (README assumption 1).
+
+### Data-source gaps (TODO only; nothing implemented)
+- TODO: Japan panel is the EDINET-Bench task sample (~1,437 firms). Consider full EDINET filings coverage to remove the selection caveat.
+- TODO: China is a powered null on 10y data; README lists no fundamentals depth fix. Look at open CSRC/Eastmoney-style sources only after checking licence terms.
+- TODO: Europe value is "underpowered"; evaluate open filings sources (e.g. ESEF/XBRL filings) for depth.
+- TODO: bundled `data/` ratios are a snapshot; add a documented refresh path from open sources.
+
 Descriptive research pipeline. Not investment advice. No warranty.
