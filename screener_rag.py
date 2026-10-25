@@ -30,7 +30,7 @@ NAMES = {"IN": "India", "US": "US", "KR": "Korea", "JP": "Japan", "EU": "Europe"
 def _mk(s: str) -> str | None:
     s = s.lower()
     for k, v in {**{n: c for n, c in NORM.items()}, **{c.lower(): c for c in NAMES}}.items():
-        if k in f" {s} ":
+        if re.search(rf"\b{re.escape(k)}\b", s):     # whole word: "singapore" is not "in"
             return v
     return None
 
@@ -168,6 +168,8 @@ RULES = ["Horizon: monthly–6M only (fast signals lose to the information-asymm
 
 def playbook(market: str = "") -> str:
     mk = _mk(market) or (market.upper() if market else None)
+    if mk and mk not in PLAYBOOK:
+        return f"Unknown market {market}. One of {list(PLAYBOOK)}."
     L = ["# Market playbook — retail-accessible edges, ranked (backtested)", ""]
     for m in (["IN", "US", "KR", "JP", "EU", "CN"] if not mk else [mk]):
         ch, rows = PLAYBOOK[m]
