@@ -30,7 +30,7 @@ NAMES = {"IN": "India", "US": "US", "KR": "Korea", "JP": "Japan", "EU": "Europe"
 def _mk(s: str) -> str | None:
     s = s.lower()
     for k, v in {**{n: c for n, c in NORM.items()}, **{c.lower(): c for c in NAMES}}.items():
-        if k in f" {s} ":
+        if re.search(rf"\b{re.escape(k)}\b", s):     # whole word: "singapore" is not "in"
             return v
     return None
 
