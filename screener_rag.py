@@ -168,6 +168,8 @@ RULES = ["Horizon: monthly–6M only (fast signals lose to the information-asymm
 
 def playbook(market: str = "") -> str:
     mk = _mk(market) or (market.upper() if market else None)
+    if mk and mk not in PLAYBOOK:
+        return f"Unknown market {market}. One of {list(PLAYBOOK)}."
     L = ["# Market playbook — retail-accessible edges, ranked (backtested)", ""]
     for m in (["IN", "US", "KR", "JP", "EU", "CN"] if not mk else [mk]):
         ch, rows = PLAYBOOK[m]
