@@ -117,6 +117,7 @@ def render_heatmap(matrix: dict = MATRIX) -> matplotlib.figure.Figure:
 
 def write_outputs(out_dir: Path = REPORTS_DIR, matrix: dict = MATRIX) -> tuple[Path, Path]:
     """Write edge_matrix.csv and edge_matrix.png into `out_dir`; return their paths."""
+    out_dir.mkdir(parents=True, exist_ok=True)
     csv_path, png_path = out_dir / "edge_matrix.csv", out_dir / "edge_matrix.png"
     matrix_frame(matrix).to_csv(csv_path, index=False)
     fig = render_heatmap(matrix)
