@@ -2,6 +2,8 @@
 
 > **Walkthrough:** [How-to post on masaladeutsch](https://masaladeutsch.blogspot.com/2026/10/how-to-use-marketscreenerrag-backtested.html) · [Video on YouTube](https://www.youtube.com/watch?v=3hloP1KwL5I)
 
+> **More videos:** [Longer walkthrough](https://www.youtube.com/watch?v=CvVA479MN_A)
+
 <!-- how-to-use-with-ai -->
 > **New here?** See [How to use this repo with AI (Claude, Gemini, ChatGPT)](HOW_TO_USE_WITH_AI.md) — clone it, paste it into an AI tool, and ask in plain English.
 
