@@ -13,7 +13,7 @@ cd market_screener_rag
 
 No git? Click the green **Code** button on the repo page, choose **Download ZIP**, and unzip it.
 
-You will usually need Python 3.10+ (`python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt`, if a requirements file exists).
+You will usually need Python 3.9+ (`python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt`, if a requirements file exists).
 
 ## 2. Give it to an AI
 

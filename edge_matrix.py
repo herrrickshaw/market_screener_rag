@@ -10,19 +10,29 @@ grey = not enough data to call. Sources: this repo's committed backtests + the p
 Output: reports/edge_matrix.csv + reports/edge_matrix.png
 """
 from __future__ import annotations
+
 from pathlib import Path
-import numpy as np, pandas as pd
+
 import matplotlib
+import numpy as np
+import pandas as pd
+
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt  # noqa: E402  (backend must be set before this import)
 
 HERE = Path(__file__).resolve().parent
+REPORTS_DIR = HERE / "reports"
 MKTS = ["IN", "US", "KR", "JP", "EU", "CN"]
+
+SCORE_STRONG = 2        # validated edge: swing
+SCORE_MIN, SCORE_MAX = -2, 2
+GREY = "#d9d9d9"
+GREY_PREFIX = "—"       # labels starting with this are "not enough data" -> grey cell
 
 # each cell: (score in [-2..+2] for colour, short label with the number + significance)
 # score: +2 strong validated edge · +1 positive · 0 underpowered/untested/neutral ·
 #        -1 validated-negative / fails · (grey when label starts with '—')
-G = lambda s, t: (s, t)
+G = lambda s, t: (s, t)  # noqa: E731  (kept: the table below reads as a grid)
 MATRIX = {
  "Value-reversion (cheap−rich, 6M)": {
    "IN": G(2, "+5.3% t2.5"), "US": G(2, "+1.7%/3M t2.3"), "KR": G(1, "+3.9% t1.5"),
@@ -48,25 +58,49 @@ MATRIX = {
 }
 
 
-def main() -> int:
-    rows = list(MATRIX)
-    scores = np.array([[MATRIX[r][m][0] for m in MKTS] for r in rows], float)
-    labels = [[MATRIX[r][m][1] for m in MKTS] for r in rows]
-    # grey-out underpowered/untested (label starts with — or 'liq' etc handled by score 0 + —)
-    mask_grey = np.array([[MATRIX[r][m][1].strip().startswith("—") for m in MKTS] for r in rows])
+# ─────────────────────────── pure builders ───────────────────────────
+def score_grid(matrix: dict = MATRIX) -> np.ndarray:
+    """Scores as a float array, shape (strategies, markets)."""
+    return np.array([[matrix[r][m][0] for m in MKTS] for r in matrix], float)
 
-    # CSV
-    pd.DataFrame([{**{"strategy": r}, **{m: MATRIX[r][m][1] for m in MKTS}} for r in rows]) \
-        .to_csv(HERE / "reports" / "edge_matrix.csv", index=False)
 
-    # heatmap (Ted Williams style)
+def label_grid(matrix: dict = MATRIX) -> list[list[str]]:
+    """Cell labels, shape (strategies, markets)."""
+    return [[matrix[r][m][1] for m in MKTS] for r in matrix]
+
+
+def grey_mask(matrix: dict = MATRIX) -> np.ndarray:
+    """True where a cell is 'not enough data' (label starts with GREY_PREFIX)."""
+    return np.array([[matrix[r][m][1].strip().startswith(GREY_PREFIX) for m in MKTS] for r in matrix])
+
+
+def matrix_frame(matrix: dict = MATRIX) -> pd.DataFrame:
+    """Label table with a `strategy` column plus one column per market (the CSV layout)."""
+    return pd.DataFrame([{"strategy": r, **{m: matrix[r][m][1] for m in MKTS}} for r in matrix])
+
+
+def fat_pitches(matrix: dict = MATRIX) -> list[str]:
+    """'<market>: <strategy> (<label>)' for every cell scored SCORE_STRONG, row-major."""
+    return [f"{m}: {r.split('(')[0].strip()} ({matrix[r][m][1]})"
+            for r in matrix for m in MKTS if matrix[r][m][0] == SCORE_STRONG]
+
+
+# ─────────────────────────── rendering / I/O ───────────────────────────
+def render_heatmap(matrix: dict = MATRIX) -> matplotlib.figure.Figure:
+    """Ted-Williams-style heatmap figure (green = swing, red = take, grey = no call)."""
+    rows = list(matrix)
+    labels = label_grid(matrix)
+    disp = np.where(grey_mask(matrix), np.nan, score_grid(matrix))
     fig, ax = plt.subplots(figsize=(11, 6.5))
-    disp = np.where(mask_grey, np.nan, scores)
-    cmap = plt.cm.RdYlGn.copy(); cmap.set_bad("#d9d9d9")
-    ax.imshow(disp, cmap=cmap, vmin=-2, vmax=2, aspect="auto")
-    ax.set_xticks(range(len(MKTS))); ax.set_xticklabels(MKTS, fontsize=13, fontweight="bold")
-    ax.set_yticks(range(len(rows))); ax.set_yticklabels(rows, fontsize=9)
-    ax.set_xlabel("market", fontsize=11); ax.xaxis.set_label_position("top"); ax.xaxis.tick_top()
+    cmap = plt.cm.RdYlGn.with_extremes(bad=GREY)
+    ax.imshow(disp, cmap=cmap, vmin=SCORE_MIN, vmax=SCORE_MAX, aspect="auto")
+    ax.set_xticks(range(len(MKTS)))
+    ax.set_xticklabels(MKTS, fontsize=13, fontweight="bold")
+    ax.set_yticks(range(len(rows)))
+    ax.set_yticklabels(rows, fontsize=9)
+    ax.set_xlabel("market", fontsize=11)
+    ax.xaxis.set_label_position("top")
+    ax.xaxis.tick_top()
     for i in range(len(rows)):
         for j in range(len(MKTS)):
             ax.text(j, i, labels[i][j], ha="center", va="center", fontsize=7.5,
@@ -77,16 +111,27 @@ def main() -> int:
     ax.set_xticks(np.arange(-.5, len(MKTS), 1), minor=True)
     ax.set_yticks(np.arange(-.5, len(rows), 1), minor=True)
     ax.grid(which="minor", color="white", linewidth=2)
-    plt.tight_layout()
-    out = HERE / "reports" / "edge_matrix.png"
-    plt.savefig(out, dpi=150, bbox_inches="tight")
-    print(f"wrote {out} + reports/edge_matrix.csv")
-    # the fat pitches
+    fig.tight_layout()
+    return fig
+
+
+def write_outputs(out_dir: Path = REPORTS_DIR, matrix: dict = MATRIX) -> tuple[Path, Path]:
+    """Write edge_matrix.csv and edge_matrix.png into `out_dir`; return their paths."""
+    out_dir.mkdir(parents=True, exist_ok=True)
+    csv_path, png_path = out_dir / "edge_matrix.csv", out_dir / "edge_matrix.png"
+    matrix_frame(matrix).to_csv(csv_path, index=False)
+    fig = render_heatmap(matrix)
+    fig.savefig(png_path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    return csv_path, png_path
+
+
+def main() -> int:
+    _, png_path = write_outputs()
+    print(f"wrote {png_path} + reports/edge_matrix.csv")
     print("\nFAT PITCHES (swing — score +2):")
-    for r in rows:
-        for m in MKTS:
-            if MATRIX[r][m][0] == 2:
-                print(f"  {m}: {r.split('(')[0].strip()} ({MATRIX[r][m][1]})")
+    for line in fat_pitches():
+        print(f"  {line}")
     return 0
 
 

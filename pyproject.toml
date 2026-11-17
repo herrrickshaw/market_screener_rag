@@ -1,0 +1,32 @@
+[project]
+name = "market-screener-rag"
+version = "0.1.0"
+description = "Offline, credit-free screener: per-market backtested winning strategies, live picks, TF-IDF Q&A"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=1.5",
+    "scikit-learn>=1.0",
+    "tabulate>=0.9",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.5", "numpy>=1.21"]
+dev = ["pytest>=7", "ruff>=0.4", "matplotlib>=3.5", "numpy>=1.21"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py39"
+extend-exclude = ["graphify-out", "data", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = [
+    "E731",  # lambda used as a tiny grid constructor in edge_matrix.MATRIX
+    "UP007", # keep Optional[...] for Python 3.9 runtime compatibility
+    "UP045",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
