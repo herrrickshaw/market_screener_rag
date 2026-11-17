@@ -55,6 +55,7 @@ def main() -> int:
     # grey-out underpowered/untested (label starts with — or 'liq' etc handled by score 0 + —)
     mask_grey = np.array([[MATRIX[r][m][1].strip().startswith("—") for m in MKTS] for r in rows])
 
+    (HERE / "reports").mkdir(exist_ok=True)   # not tracked: absent on a fresh clone
     # CSV
     pd.DataFrame([{**{"strategy": r}, **{m: MATRIX[r][m][1] for m in MKTS}} for r in rows]) \
         .to_csv(HERE / "reports" / "edge_matrix.csv", index=False)
