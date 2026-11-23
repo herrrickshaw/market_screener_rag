@@ -173,6 +173,7 @@ def test_main_without_args_prints_usage(cli):
     (("earnings",), "Historical earnings of the winning strategies"),
     (("universal",), "The metric that works"),
     (("playbook", "japan"), "## Japan"),
+    (("hollow",), "(best match: Korea)"),
     (("playbook",), "Rules everywhere"),
     (("ask", "why", "long-only", "in", "india"), "best match"),
     (("korea", "long", "short", "hollow", "overpriced"), "(best match: Korea)"),
@@ -180,3 +181,45 @@ def test_main_without_args_prints_usage(cli):
 def test_main_dispatch(cli, argv, needle):
     rc, out = cli(*argv)
     assert rc == 0 and needle in out
+
+
+def test_main_playbook_argument_selects_one_market(cli):
+    _, out = cli("playbook", "japan")
+    assert "## Japan" in out and "## India" not in out and "Rules everywhere" not in out
+
+
+def test_screen_default_limit_is_fifteen(datadir):
+    _write(datadir, "valuation_clusters.csv", [_cl("IN", f"n{i:02d}", -1.0 + i / 100, 0.3) for i in range(20)])
+    assert "cheap-for-quality, 15 names)" in R.screen("IN")
+    _write(datadir, "valuation_clusters.csv", [_cl("US", f"u{i:02d}", -1.0 + i / 100, 0.3) for i in range(20)])
+    out = R.screen("US")
+    assert "(15, hold" in out and "u14" in out and "u15" not in out
+
+
+def test_screen_us_lists_cheapest_first(datadir):
+    _write(datadir, "valuation_clusters.csv", [_cl("US", "mild", -1.0, 0.1), _cl("US", "deep", -3.0, 0.1)])
+    out = R.screen("US")
+    assert out.index("deep") < out.index("mild")
+
+
+def test_strategy_prints_placeholder_when_no_metrics_validated(monkeypatch):
+    monkeypatch.setitem(R.KB["markets"], "CN", {**R.KB["markets"]["CN"], "winning_metrics": []})
+    assert "**Winning metrics:** (none validated)" in R.strategy("CN")
+
+
+def _fake_docs(monkeypatch, india, korea):
+    monkeypatch.setattr(R, "strategy", lambda mk: {"IN": india, "KR": korea}.get(mk, "zzz" + mk))
+    monkeypatch.setattr(R, "universal", lambda _m=None: "qqq")
+    monkeypatch.setattr(R, "earnings", lambda _m=None: "www")
+
+
+def test_ask_ignores_english_stop_words(monkeypatch):
+    # only stop words in the query: no signal -> first document (India); without stop-word removal Korea would win
+    _fake_docs(monkeypatch, "alpha", "the the the the the the")
+    assert "(best match: India)" in R.ask("the")
+
+
+def test_ask_uses_bigrams_to_break_unigram_ties(monkeypatch):
+    # India and Korea have identical unigrams; only Korea contains the bigram "blue sky"
+    _fake_docs(monkeypatch, "sky blue green grass", "blue sky grass green")
+    assert "(best match: Korea)" in R.ask("blue sky")
