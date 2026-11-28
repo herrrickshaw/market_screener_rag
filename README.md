@@ -25,6 +25,47 @@ backtests / the data — never invented.**
 > ⚠️ **Research and education only — NOT investment advice.** All earnings are gross of
 > costs and short-borrow, on survivorship-biased universes; read spreads, not levels.
 
+## In plain English
+
+*This section is for readers who do not write software.*
+
+**What is it?** Think of a small, well-labelled filing cabinet about six stock markets, with a clerk who can
+only quote what is in the cabinet. You can ask which investing approach held up in past tests for a country,
+and see which companies in a saved list match that approach today.
+
+**What does "RAG" mean here?** RAG stands for "retrieval-augmented generation": a tool first *looks up* relevant
+saved text and then answers from it. This one is deliberately simpler than most. It only looks up and filters.
+No AI model writes the answers, so it cannot make up a number, but it also cannot reason about a new question.
+
+**What you put in and what you get out**
+
+| You type | You get back |
+|---|---|
+| `screen IN` | A table of Indian companies that pass India's saved filter |
+| `strategy KR` | A description of the approach that tested best for Korea, with its past results |
+| `ask "why long-only in india"` | The saved notes that best match your words |
+
+**How much should you trust it?** Treat it as a study aid, not a tip sheet.
+- Results are from the past and are measured **before trading costs**. Real returns would be lower.
+- The company lists only include firms that still exist, which flatters past results.
+- The data is a dated snapshot, not live. [DATA_SOURCES.md](DATA_SOURCES.md) lists known data problems that are
+  still open, including some Indian earnings-per-share values recorded in the wrong units.
+- The detailed price history behind the headline results is not in this repository, so you cannot re-check them here.
+- Japan, Europe and China have a written verdict but may have no company list to filter. The tool says so
+  instead of inventing one.
+
+**Words you will meet**
+- **Screen:** a filter, such as "cheap compared with similar companies and profitable".
+- **Momentum:** the idea that shares which have been rising tend to keep rising for a while.
+- **Value / mean reversion:** the idea that unusually cheap shares drift back towards normal prices.
+- **t-statistic and Deflated Sharpe:** two checks on whether a past result is more than luck.
+  More terms are in [GLOSSARY.md](GLOSSARY.md).
+
+**What you need:** a computer with Python. No paid service, account or internet connection is needed after
+installation, and nothing you type is sent anywhere.
+
+**Not investment advice.** Speak to a qualified adviser before acting on any of it.
+
 ## Where's the edge? The fat-pitch grid
 
 ![Filter × market edge matrix](edge_matrix.png)
