@@ -37,10 +37,12 @@ The screener is offline: it reads the two CSV snapshots below plus `winning_stra
 Bailey and Lopez de Prado (2014); Harvey, Liu and Zhu (2016); Harvey and Liu (2015); De Bondt and Thaler (1985); Lakonishok, Shleifer and Vishny (1994); Jegadeesh and Titman (1993); Moskowitz, Ooi and Pedersen (2012); Piotroski (2000); Almgren and Chriss (2000); Amihud (2002); Corwin and Schultz (2012); Tibshirani (1996); Sugiura et al. (2025). Verify each citation with Crossref/OpenAlex before publication.
 
 ## 4. Open items
-1. Add Japan, Europe, China clusters or remove the "winning screen per market" claim for them.
-2. Winsorise or flag extreme ratios; fix India EPS units; drop forward-dated fy_end.
-3. Add `source` to `all_ratios.csv`; record collection dates per row.
+1. Add Japan, Europe, China clusters. (The README now states that picks exist only for India, Korea and the US.)
+2. Correct the underlying data. The screener now leaves out rows whose fiscal year ends after `close_date`
+   and flags implausible PE, PB, ROE and EPS values, but the CSVs are unchanged: India EPS units are still
+   mixed in `all_ratios.csv`, which also keeps its forward-dated rows.
+3. Add `source` to `all_ratios.csv`; record collection dates per row. Needs provenance from the upstream pipeline.
 4. Decide publication scope: derived verdicts only (no raw close/mcap) if made public.
 5. Refresh snapshots (latest 2026-07-23) and `winning_strategies.json` (2026-07-25).
-6. Add LICENSE and NOTICE (SEC, Damodaran, EDINET-Bench attribution).
+6. Add a LICENSE (owner's choice). Source attribution is in `NOTICE`.
 ```

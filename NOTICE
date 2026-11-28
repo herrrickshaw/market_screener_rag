@@ -1,0 +1,11 @@
+Attribution for data referred to or bundled in this repository.
+This file records sources only. It grants no licence and does not replace each publisher's terms;
+see DATA_SOURCES.md.
+
+- SEC EDGAR XBRL data, U.S. Securities and Exchange Commission (US rows in data/valuation_clusters.csv).
+- OpenDART, Financial Supervisory Service of Korea (Korea rows): https://opendart.fss.or.kr/
+- Yahoo Finance, retrieved with yfinance (India rows). See the terms note in DATA_SOURCES.md.
+- Damodaran, A., global industry data, NYU Stern (speculation cross-check, not bundled):
+  https://pages.stern.nyu.edu/~adamodar/
+- EDINET-Bench, Sakana AI, derived from EDINET, Japan Financial Services Agency (research input,
+  not bundled): https://huggingface.co/datasets/SakanaAI/EDINET-Bench ; arXiv:2506.08762

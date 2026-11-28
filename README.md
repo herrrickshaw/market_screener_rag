@@ -12,8 +12,10 @@ A **credit-free, offline** retrieval + screening tool that runs on the **metrics
 actually work in each market** — the backtested, multiple-testing-survived winning
 strategies from a multi-market systematic research platform (India, US, Korea, Japan,
 Europe, China). It answers what the winning strategy is per market, reports each
-strategy's **historical earnings**, and applies the winning screen to a current-universe
-snapshot to produce **stock picks and buy/sell signals**.
+strategy's **historical earnings**, and applies the winning screen to a bundled dated
+snapshot to produce **stock picks and buy/sell signals**. Company data for screening is
+bundled for **India, Korea and the US only**; Japan, Europe and China have written verdicts but
+no picks.
 
 No paid API, no model download: rule-based strategy knowledge base + deterministic
 screening over bundled ratios + TF-IDF retrieval (scikit-learn). **Numbers come from the
@@ -51,7 +53,9 @@ No AI model writes the answers, so it cannot make up a number, but it also canno
 - The data is a dated snapshot, not live. [DATA_SOURCES.md](DATA_SOURCES.md) lists known data problems that are
   still open, including some Indian earnings-per-share values recorded in the wrong units.
 - The detailed price history behind the headline results is not in this repository, so you cannot re-check them here.
-- Japan, Europe and China have a written verdict but may have no company list to filter. The tool says so
+- Screen results may carry a "check" note beside a company whose figures look implausible. The figure is shown
+  unchanged; verify it. Rows for financial years that had not ended at the snapshot date are left out.
+- Japan, Europe and China have a written verdict but no company list to filter. The tool says so
   instead of inventing one.
 
 **Words you will meet**
