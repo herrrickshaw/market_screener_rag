@@ -48,6 +48,32 @@ def _clusters(market: str) -> pd.DataFrame:
     return d[d.mk == market].copy()
 
 
+# ─────────────────────────── data quality (see DATA_SOURCES.md) ───────────────────────────
+def _drop_unfinished_years(d: pd.DataFrame) -> tuple[pd.DataFrame, int]:
+    """Remove rows whose financial year ends after the price snapshot (close_date):
+    a full year's figures cannot exist yet. Rows lacking either date are kept."""
+    if not {"fy_end", "close_date"} <= set(d.columns):
+        return d, 0
+    bad = pd.to_datetime(d.fy_end, errors="coerce") > pd.to_datetime(d.close_date, errors="coerce")
+    return d[~bad], int(bad.sum())
+
+
+def _quality_flags(row: pd.Series, market: str) -> str:
+    """Warnings for implausible figures. Values are shown unchanged; the bounds are rules of thumb."""
+    pe, pb, roe, eps = (pd.to_numeric(row.get(k), errors="coerce") for k in ("pe", "pb", "roe", "eps"))
+    flags = []
+    low_pe = 5 if market == "IN" else 1  # India: very low PE is often a unit/EPS artefact
+    if pe < low_pe or pe > 200:
+        flags.append("check PE")
+    if pb < 0.1 or pb > 50:
+        flags.append("check PB")
+    if abs(roe) > 1:
+        flags.append("check ROE")
+    if 0 < abs(eps) < 1e-4:
+        flags.append("check EPS units")
+    return ", ".join(flags)
+
+
 # ─────────────────────────── strategy / earnings ───────────────────────────
 def strategy(market: str) -> str:
     m = KB["markets"].get(market)
@@ -102,12 +128,18 @@ def screen(market: str, n: int = 15) -> str:
         return f"Unknown market {market}."
     if not m["winning_metrics"]:
         return f"{NAMES[market]}: no validated strategy ({m['verdict']}). No screen run."
-    cl = _clusters(market)
+    cl, unfinished = _drop_unfinished_years(_clusters(market))
     if cl.empty:
         return f"{NAMES[market]}: no bundled fundamentals to screen (likely underpowered/pending)."
     out = [f"# {NAMES[market]} — live picks from the winning screen", "",
            f"Strategy: **{m['character']}**, {m['book']}. {m['verdict']}", ""]
+    if unfinished:
+        out += [f"*Data check: {unfinished} row(s) left out because the financial year ends after the "
+                "price snapshot.*", ""]
+    cl = cl.assign(data_flags=cl.apply(_quality_flags, axis=1, market=market))
     cols = [c for c in ["name", "pe", "pb", "roe", "valuation_z", "verdict"] if c in cl.columns]
+    if cl.data_flags.any():
+        cols.append("data_flags")
     if market == "IN":                       # long-only: cheap-vs-peers ∩ high ROE
         longs = cl[(cl.valuation_z < -0.8) & (cl.roe > 0.15)].sort_values("valuation_z").head(n)
         out += [f"**LONG (cheap-for-quality, {len(longs)} names)** — momentum overlay applies live:",
